@@ -36,6 +36,23 @@
       } else {
         alert(userName + ', you got this one wrong.  I was going to share my pile of ants with you, but now I am going to keep them all to myself.');
       }
+
+      /*
+      BONUS CODE INCOMING!!! good times with the BONUS CODE!!!
+      */
+
+      var userAnswer4 = prompt('Oh man ' + userName + ', I am having so much fun.  I am going to ask you another question.  How old do you think I am?  Please enter a number.');
+      parseInt(userAnswer4);
+      console.log('The user\'s fourth answer is ' + userAnswer4);
+
+      var myAge = 34;
+      if (userAnswer4 < myAge) {
+        alert('Bad news, ' + userName + '. Your answer is two low. I appreciate your optimism though!');
+      } else if (userAnswer4 > myAge) {
+        alert(userName + ', you got this one wrong.  Your answer was too high.  I do have a lot of grey in my hair, so I understand where you are coming from.');
+      } else if (userAnswer4 == myAge) {
+        alert('Holy Shamoley, ' + userName + ', you are right on!  You deserve a gold star and a giant stuffed slothbear!');
+      }
     </script>
   </body>
 </html>
