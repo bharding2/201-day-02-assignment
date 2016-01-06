@@ -20,4 +20,5 @@ First Repo; guessing game.  Assignment from day two including a website with a j
   <li>While loop to keep game going until last question is correct.</li>
   <li>Loop is horribly broken!  Fixed loop that was impossible to exit.</li>
   <li>Added a hint after 10 incorrect guesses</li>
+  <li>Added default userName (Sloth Bearson is the greatest!)</li>
 </ul>
