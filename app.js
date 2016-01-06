@@ -4,8 +4,6 @@ console.log('The user\'s name is ' + userName);
 var userAnswer1 = prompt('First question!  This is a yes/no question, ' + userName + ', so please answer with Y or N.  Was I born in Alaska?');
 console.log('The user\'s first answer is ' + userAnswer1);
 
-//toUpperCase()
-
 if (userAnswer1.toUpperCase() === 'Y' || userAnswer1.toUpperCase() === 'YES') {
   alert('Good job ' + userName + ', you are right!  I was born in Alaska.  The doctor had me fight a polar bear inside our igloo, as is tradition');
 } else {
@@ -42,6 +40,8 @@ if (userAnswer4 < myAge) {
   alert(userName + ', you got this one wrong.  Your answer was too high.  I do have a lot of grey in my hair, so I understand where you are coming from.');
 } else if (userAnswer4 === myAge) {
   alert('Holy Shamoley, ' + userName + ', you are right on!  You deserve a gold star and a giant stuffed slothbear!');
+} else if (isNaN(userAnswer4)) {
+  alert('Well ' + userName + ', that isn\'t even a number')
 }
 
 

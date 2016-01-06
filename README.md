@@ -15,5 +15,5 @@ First Repo; guessing game.  Assignment from day two including a website with a j
   <li>Split javascript out into app.js file (separated concerns)</li>
   <li>first pull request/merge of wednesday and master, pulled master back to local</li>
   <li>fixing input for uppercase, lowercase, or shorthand</li>
-  <li></li>
+  <li>added error handling for non-numerical input to question 4 using isNaN()</li>
 </ul>
