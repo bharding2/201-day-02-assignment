@@ -19,4 +19,5 @@ First Repo; guessing game.  Assignment from day two including a website with a j
   <li>Added a counter to tell the user how many questions they have answered correctly</li>
   <li>While loop to keep game going until last question is correct.</li>
   <li>Loop is horribly broken!  Fixed loop that was impossible to exit.</li>
+  <li>Added a hint after 10 incorrect guesses</li>
 </ul>

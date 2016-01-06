@@ -52,22 +52,21 @@ while (userAnswer4 != myAge) {
 
   if (userAnswer4 < myAge) {
     alert('Bad news, ' + userName + '. Your answer is two low. I appreciate your optimism though!  You have guessed ' + userNumGuesses + ' times.');
+    console.log('The user has guessed ' + userNumGuesses + ' times.');
   } else if (userAnswer4 > myAge) {
     alert(userName + ', you got this one wrong.  Your answer was too high.  I do have a lot of grey in my hair, so I understand where you are coming from.  You have guessed ' + userNumGuesses + ' times.');
+    console.log('The user has guessed ' + userNumGuesses + ' times.');
   } else if (isNaN(userAnswer4)) {
     alert('Well ' + userName + ', that isn\'t even a number. You have guessed ' + userNumGuesses + ' times.')
+    console.log('The user has guessed ' + userNumGuesses + ' times.');
   } else if (userAnswer4 === myAge) {
     userNumCorrect++;
     alert('Holy Shamoley, ' + userName + ', you are right on!  You deserve a gold star and a giant stuffed slothbear!  You answered ' + userNumCorrect + ' answers correctly, and the last question only took you ' + userNumGuesses + ' guesses!  Great job!');
+    console.log('User has ' + userNumCorrect + ' answers correct');
+    console.log('The user guessed ' + userNumGuesses + ' times.');
+  }
+
+  if (userNumGuesses === 10) {
+    alert('How about a hint?  I was born in 1981.');
   }
 }
-
-
-/* counter
-need a new variable
-need to update the variable
-
-var counter = 0, if correct counter++
-
-while loop, test while answer is wrong, keep asking questions
-*/
