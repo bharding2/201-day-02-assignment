@@ -13,8 +13,10 @@ First Repo; guessing game.  Assignment from day two including a website with a j
 <ul>
   <li>Create new branch named wednesday</li>
   <li>Split javascript out into app.js file (separated concerns)</li>
-  <li>first pull request/merge of wednesday and master, pulled master back to local</li>
-  <li>fixing input for uppercase, lowercase, or shorthand</li>
-  <li>added error handling for non-numerical input to question 4 using isNaN()</li>
-  <li>added a counter to tell the user how many questions they have answered correctly</li
+  <li>First pull request/merge of wednesday and master, pulled master back to local</li>
+  <li>Fixing input for uppercase, lowercase, or shorthand</li>
+  <li>Added error handling for non-numerical input to question 4 using isNaN()</li>
+  <li>Added a counter to tell the user how many questions they have answered correctly</li>
+  <li>While loop to keep game going until last question is correct.</li>
+  <li>Loop is horribly broken!  Fixed loop that was impossible to exit.</li>
 </ul>

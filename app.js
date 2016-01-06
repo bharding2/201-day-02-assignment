@@ -39,20 +39,27 @@ if (userAnswer3.toUpperCase() === 'Y' || userAnswer3.toUpperCase() === 'YES') {
   console.log('User has ' + userNumCorrect + ' answers correct');
 }
 
-var userAnswer4 = prompt('Oh man ' + userName + ', I am having so much fun.  I am going to ask you another question.  How old do you think I am?  Please enter a number.');
-console.log('The user\'s fourth answer is ' + userAnswer4);
-
-userAnswer4 = parseInt(userAnswer4);
-
 var myAge = 34;
-if (userAnswer4 < myAge) {
-  alert('Bad news, ' + userName + '. Your answer is two low. I appreciate your optimism though!');
-} else if (userAnswer4 > myAge) {
-  alert(userName + ', you got this one wrong.  Your answer was too high.  I do have a lot of grey in my hair, so I understand where you are coming from.');
-} else if (userAnswer4 === myAge) {
-  alert('Holy Shamoley, ' + userName + ', you are right on!  You deserve a gold star and a giant stuffed slothbear!');
-} else if (isNaN(userAnswer4)) {
-  alert('Well ' + userName + ', that isn\'t even a number')
+var userNumGuesses = 0; //number of guesses on the age question
+
+while (userAnswer4 != myAge) {
+  userNumGuesses++;
+
+  var userAnswer4 = prompt('Oh man ' + userName + ', I am having so much fun.  I am going to ask you another question.  How old do you think I am?  Please enter a number.');
+  console.log('The user\'s fourth answer is ' + userAnswer4);
+
+  userAnswer4 = parseInt(userAnswer4);
+
+  if (userAnswer4 < myAge) {
+    alert('Bad news, ' + userName + '. Your answer is two low. I appreciate your optimism though!  You have guessed ' + userNumGuesses + ' times.');
+  } else if (userAnswer4 > myAge) {
+    alert(userName + ', you got this one wrong.  Your answer was too high.  I do have a lot of grey in my hair, so I understand where you are coming from.  You have guessed ' + userNumGuesses + ' times.');
+  } else if (isNaN(userAnswer4)) {
+    alert('Well ' + userName + ', that isn\'t even a number. You have guessed ' + userNumGuesses + ' times.')
+  } else if (userAnswer4 === myAge) {
+    userNumCorrect++;
+    alert('Holy Shamoley, ' + userName + ', you are right on!  You deserve a gold star and a giant stuffed slothbear!  You answered ' + userNumCorrect + ' answers correctly, and the last question only took you ' + userNumGuesses + ' guesses!  Great job!');
+  }
 }
 
 
