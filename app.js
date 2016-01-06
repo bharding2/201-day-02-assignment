@@ -1,31 +1,42 @@
 var userName = prompt('Welcome to the guessing game.  What is your name?');
 console.log('The user\'s name is ' + userName);
 
+var userNumCorrect = 0; //number of questions answered correctly
+
 var userAnswer1 = prompt('First question!  This is a yes/no question, ' + userName + ', so please answer with Y or N.  Was I born in Alaska?');
 console.log('The user\'s first answer is ' + userAnswer1);
 
 if (userAnswer1.toUpperCase() === 'Y' || userAnswer1.toUpperCase() === 'YES') {
-  alert('Good job ' + userName + ', you are right!  I was born in Alaska.  The doctor had me fight a polar bear inside our igloo, as is tradition');
+  userNumCorrect++;
+  alert('Good job ' + userName + ', you are right!  I was born in Alaska.  The doctor had me fight a polar bear inside our igloo, as is tradition.  You have answered ' + userNumCorrect + ' questions correctly.  Nice Job.');
+  console.log('User has ' + userNumCorrect + ' answers correct');
 } else {
-  alert('Too bad ' + userName + ', you are wrong!  I was born in Alaska.  You better bone up on your trivia.');
+  alert('Too bad ' + userName + ', you are wrong!  I was born in Alaska.  You better bone up on your trivia.  You have answered ' + userNumCorrect + ' questions correctly.  Nice Job.');
+  console.log('User has ' + userNumCorrect + ' answers correct');
 }
 
 var userAnswer2 = prompt('Alright ' + userName + ', next question! This is a yes/no question, so please answer with Y or N.  Are my eyes blue?');
 console.log('The user\'s second answer is ' + userAnswer2);
 
 if (userAnswer2.toUpperCase() === 'Y' || userAnswer2.toUpperCase() === 'YES') {
-  alert('Great choice ' + userName + '!  My eyes are blue and dark, like a stormy sea');
+  userNumCorrect++;
+  alert('Great choice ' + userName + '!  My eyes are blue and dark, like a stormy sea. You have answered ' + userNumCorrect + ' questions correctly.  Nice Job.');
+  console.log('User has ' + userNumCorrect + ' answers correct');
 } else {
-  alert('Rough luck ' + userName +', you are wrong.  You should spend more time staring at my face.');
+  alert('Rough luck ' + userName +', you are wrong.  You should spend more time staring at my face.  You have answered ' + userNumCorrect + ' questions correctly.  Nice Job.');
+  console.log('User has ' + userNumCorrect + ' answers correct');
 }
 
 var userAnswer3 = prompt('You are doing great ' + userName + ', lets keep moving!  This is another yes/no question, so please answer with Y or N.  Is my favorite animal the slothbear?');
 console.log('The user\'s third answer is ' + userAnswer3);
 
 if (userAnswer3.toUpperCase() === 'Y' || userAnswer3.toUpperCase() === 'YES') {
-  alert('Right you are ' + userName + '!  My favorite animal is the slothbear.  Lets make some vacuum noises to celebrate!');
+  userNumCorrect++;
+  alert('Right you are ' + userName + '!  My favorite animal is the slothbear.  Lets make some vacuum noises to celebrate!  You have answered ' + userNumCorrect + ' questions correctly.  Nice Job.');
+  console.log('User has ' + userNumCorrect + ' answers correct');
 } else {
-  alert(userName + ', you got this one wrong.  I was going to share my pile of ants with you, but now I am going to keep them all to myself.');
+  alert(userName + ', you got this one wrong.  I was going to share my pile of ants with you, but now I am going to keep them all to myself.  You have answered ' + userNumCorrect + ' questions correctly.  Nice Job.');
+  console.log('User has ' + userNumCorrect + ' answers correct');
 }
 
 var userAnswer4 = prompt('Oh man ' + userName + ', I am having so much fun.  I am going to ask you another question.  How old do you think I am?  Please enter a number.');

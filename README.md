@@ -16,4 +16,5 @@ First Repo; guessing game.  Assignment from day two including a website with a j
   <li>first pull request/merge of wednesday and master, pulled master back to local</li>
   <li>fixing input for uppercase, lowercase, or shorthand</li>
   <li>added error handling for non-numerical input to question 4 using isNaN()</li>
+  <li>added a counter to tell the user how many questions they have answered correctly</li
 </ul>
