@@ -14,5 +14,6 @@ First Repo; guessing game.  Assignment from day two including a website with a j
   <li>Create new branch named wednesday</li>
   <li>Split javascript out into app.js file (separated concerns)</li>
   <li>first pull request/merge of wednesday and master, pulled master back to local</li>
+  <li>fixing input for uppercase, lowercase, or shorthand</li>
   <li></li>
 </ul>
