@@ -7,7 +7,7 @@ First Repo; guessing game.  Assignment from day two including a website with a j
 <h3>day 1: 01/05/16</h3>
 <ul>
   <li>Guessing game has 4 questions, 3 y/n and one guessing an age</li>
-</ul
+</ul>
 
 <h3>day 2: 01/06/15</h3>
 <ul>
