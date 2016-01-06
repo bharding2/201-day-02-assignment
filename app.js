@@ -1,6 +1,10 @@
 var userName = prompt('Welcome to the guessing game.  What is your name?');
 console.log('The user\'s name is ' + userName);
 
+if (userName === '') {
+  userName = 'Sloth Bearson';
+}
+
 var userNumCorrect = 0; //number of questions answered correctly
 
 var userAnswer1 = prompt('First question!  This is a yes/no question, ' + userName + ', so please answer with Y or N.  Was I born in Alaska?');
@@ -61,12 +65,14 @@ while (userAnswer4 != myAge) {
     console.log('The user has guessed ' + userNumGuesses + ' times.');
   } else if (userAnswer4 === myAge) {
     userNumCorrect++;
-    alert('Holy Shamoley, ' + userName + ', you are right on!  You deserve a gold star and a giant stuffed slothbear!  You answered ' + userNumCorrect + ' answers correctly, and the last question only took you ' + userNumGuesses + ' guesses!  Great job!');
+    alert('Holy Shamoley, ' + userName + ', you are right on!  I am 34 years old.  You deserve a gold star and a giant stuffed slothbear!  You answered ' + userNumCorrect + ' answers correctly, and the last question only took you ' + userNumGuesses + ' guesses!  Great job!');
     console.log('User has ' + userNumCorrect + ' answers correct');
     console.log('The user guessed ' + userNumGuesses + ' times.');
   }
 
   if (userNumGuesses === 10) {
     alert('How about a hint?  I was born in 1981.');
+  } else if (userNumGuesses === 20) {
+    alert('How about another hint? Type the number 34 into the text box...')
   }
 }
