@@ -1,13 +1,24 @@
 # guessing-game
-Ben Harding
-Codefellows 201d5
+<h2>Ben Harding</h2>
+<h3>Codefellows 201d5</h3>
 
 First Repo; guessing game.  Assignment from day two including a website with a javascript guessing game uploaded to a Repo
 
-day 1: 01/05/16
--Guessing game has 4 questions, 3 y/n and one guessing an age
+<h3>day 1: 01/05/16</h3>
+<ul>
+  <li>Guessing game has 4 questions, 3 y/n and one guessing an age</li>
+</ul>
 
-day 2: 01/06/15
--Create new branch named Wednesday
--Split javascript out into app.js file
--
+<h3>day 2: 01/06/15</h3>
+<ul>
+  <li>Create new branch named wednesday</li>
+  <li>Split javascript out into app.js file (separated concerns)</li>
+  <li>First pull request/merge of wednesday and master, pulled master back to local</li>
+  <li>Fixing input for uppercase, lowercase, or shorthand</li>
+  <li>Added error handling for non-numerical input to question 4 using isNaN()</li>
+  <li>Added a counter to tell the user how many questions they have answered correctly</li>
+  <li>While loop to keep game going until last question is correct.</li>
+  <li>Loop is horribly broken!  Fixed loop that was impossible to exit.</li>
+  <li>Added a hint after 10 incorrect guesses</li>
+  <li>Added default userName (Sloth Bearson is the greatest!)</li>
+</ul>
