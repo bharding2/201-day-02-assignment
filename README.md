@@ -4,12 +4,12 @@
 
 First Repo; guessing game.  Assignment from day two including a website with a javascript guessing game uploaded to a Repo
 
-<h3>day 1: 01/05/16</h3>
+<h3>day 2: 01/05/16</h3>
 <ul>
   <li>Guessing game has 4 questions, 3 y/n and one guessing an age</li>
 </ul>
 
-<h3>day 2: 01/06/15</h3>
+<h3>day 3: 01/06/15</h3>
 <ul>
   <li>Create new branch named wednesday</li>
   <li>Split javascript out into app.js file (separated concerns)</li>
@@ -22,3 +22,12 @@ First Repo; guessing game.  Assignment from day two including a website with a j
   <li>Added a hint after 10 incorrect guesses</li>
   <li>Added default userName (Sloth Bearson is the greatest!)</li>
 </ul>
+<h3>day 4: 01/07/15 (Aimee Soucy as driver)</h3>
+<ul>
+  <li>Moved questions from alert boxes to HTML page.</li>
+  <li>Added IDs to result p-tags.</li>
+  <li>Split questions into functions.</li>
+  <li>Commented out alerts.</li>
+  <li>Added textContent to bring responses to HTML page.</li>
+  <li>Added function calls.</li>
+</ul>  
