@@ -80,7 +80,7 @@ var myAge = 34;
 var userNumGuesses = 0; //number of guesses on the age question
 
 function fourthQuestion() {
-  while (userAnswer4 != myAge) {
+  while (userAnswer4 !== myAge) {
     userNumGuesses++;
 
     var userAnswer4 = prompt('Oh man ' + userName + ', I am having so much fun.  I am going to ask you another question.  How old do you think I am?  Please enter a number.');
