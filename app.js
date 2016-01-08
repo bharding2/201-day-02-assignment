@@ -24,6 +24,8 @@ function userGreeting () {
   greeting1.textContent = 'Hello, ' + userName + '!  I have a few questions to ask you.';
 }
 
+userGreeting();
+
 function correctCounter() {
   correct1.textContent = userNumCorrect + ' questions correct.';
 }
@@ -88,7 +90,7 @@ function fourthQuestion() {
 }
 
 function fifthQuestion() {
-  var favPlayers = ['Elwood Finch', 'Randy Baribeau', 'Roger Wilcox', 'Bernard Boulanger', 'Izcutzin Arizmendi', 'Pigmalion Mpalotis'];
+  var favPlayers = ['Elwood Finch', 'Randy Baribeau', 'Roger Wilcox', 'Bernard Boulanger', 'Izcautzin Arizmendi', 'Pigmalion Mpalotis'];
 
   var userAnswer4 = prompt('This one is a doozy ' + userName +'. Name one of my 6 favorite FC Slothbear players.');
   console.log('User\'s fifth answer is ' + userAnswer4);
@@ -109,6 +111,6 @@ function fifthQuestion() {
   }
 }
 
-userGreeting();
+
 fourthQuestion();
 fifthQuestion();
