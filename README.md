@@ -31,3 +31,7 @@ First Repo; guessing game.  Assignment from day two including a website with a j
   <li>Added textContent to bring responses to HTML page.</li>
   <li>Added function calls.</li>
 </ul>  
+<h4>(Ben Harding as Driver)</h3>
+<ul>
+  <li>Added fifth question with multiple correct answers using an array.</li>
+</ul>
