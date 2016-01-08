@@ -4,73 +4,48 @@ var res2 = document.getElementById('result2');
 var res3 = document.getElementById('result3');
 var res4 = document.getElementById('result4');
 var res5 = document.getElementById('result5');
-
-var correct1 = document.getElementById('correctCount') ;
-
 var userName = prompt('Welcome to the guessing game.  What is your name?');
-console.log('The user\'s name is ' + userName);
+var correct1 = document.getElementById('correctCount') ;
+var userNumCorrect = 0; //number of questions answered correctly
 if (userName === '') {
   userName = 'Sloth Bearson';
 }
+
+var quesData = [
+  ['First question!  This is a yes/no question, ' + userName + ', so please answer with Y or N.  Was I born in Alaska?','Y','YES','Good job ' + userName + ', you are right!  I was born in Alaska.  The doctor had me fight a polar bear inside our igloo, as is tradition.  You have answered ' + userNumCorrect + ' questions correctly.  Nice Job.','Too bad ' + userName + ', you are wrong!  I was born in Alaska.  You better bone up on your trivia.  You have answered ' + userNumCorrect + ' questions correctly.  Nice Job.',res1],
+
+  ['Alright ' + userName + ', next question! This is a yes/no question, so please answer with Y or N.  Are my eyes blue?','Y','YES', 'Great choice ' + userName + '!  My eyes are blue and dark, like a stormy sea. You have answered ' + userNumCorrect + ' questions correctly.  Nice Job.','Rough luck ' + userName +', you are wrong.  You should spend more time staring at my face.  You have answered ' + userNumCorrect + ' questions correctly.  Nice Job.',res2 ],
+
+  ['You are doing great ' + userName + ', lets keep moving!  This is another yes/no question, so please answer with Y or N.  Is my favorite animal the slothbear?','Y','YES','Right you are ' + userName + '!  My favorite animal is the slothbear.  Lets make some vacuum noises to celebrate!  You have answered ' + userNumCorrect + ' questions correctly.  Nice Job.',userName + ', you got this one wrong.  I was going to share my pile of ants with you, but now I am going to keep them all to myself.  You have answered ' + userNumCorrect + ' questions correctly.  Nice Job.',res3]
+];
+
 
 function userGreeting () {
   greeting1.textContent = 'Hello, ' + userName + '!  I have a few questions to ask you.';
 }
 
-var userNumCorrect = 0; //number of questions answered correctly
-
 function correctCounter() {
-  console.log ('The user got ' + userNumCorrect + ' questions correct.');
   correct1.textContent = userNumCorrect + ' questions correct.';
 }
 
-function firstQuestion() {
-  var userAnswer1 = prompt('First question!  This is a yes/no question, ' + userName + ', so please answer with Y or N.  Was I born in Alaska?');
-  console.log('The user\'s first answer is ' + userAnswer1);
+function questions() {
+  var userAnswer1 = prompt(quesData[i][0]);
 
-  if (userAnswer1.toUpperCase() === 'Y' || userAnswer1.toUpperCase() === 'YES') {
+  if (userAnswer1.toUpperCase() === quesData[i][1] || userAnswer1.toUpperCase() === quesData[i][2]) {
     userNumCorrect++;
     correctCounter();
+    quesData[i][5].textContent = quesData[i][3];
+    quesData[i][5].className='right';
 
-    res1.textContent = 'Good job ' + userName + ', you are right!  I was born in Alaska.  The doctor had me fight a polar bear inside our igloo, as is tradition.  You have answered ' + userNumCorrect + ' questions correctly.  Nice Job.';
-
-    console.log('User has ' + userNumCorrect + ' answers correct');
-  } else {
-    res1.textContent = 'Too bad ' + userName + ', you are wrong!  I was born in Alaska.  You better bone up on your trivia.  You have answered ' + userNumCorrect + ' questions correctly.  Nice Job.';
-    console.log('User has ' + userNumCorrect + ' answers correct');
-  }
+    } else {
+    quesData[i][5].textContent = quesData[i][4];
+    quesData[i][5].className='wrong';
+    }
 }
 
-function secondQuestion() {
-  var userAnswer2 = prompt('Alright ' + userName + ', next question! This is a yes/no question, so please answer with Y or N.  Are my eyes blue?');
-  console.log('The user\'s second answer is ' + userAnswer2);
+for (i = 0; i < quesData.length; i++) {
+questions();
 
-  if (userAnswer2.toUpperCase() === 'Y' || userAnswer2.toUpperCase() === 'YES') {
-    userNumCorrect++;
-    correctCounter();
-
-    res2.textContent = 'Great choice ' + userName + '!  My eyes are blue and dark, like a stormy sea. You have answered ' + userNumCorrect + ' questions correctly.  Nice Job.';
-    console.log('User has ' + userNumCorrect + ' answers correct');
-  } else {
-    res2.textContent = 'Rough luck ' + userName +', you are wrong.  You should spend more time staring at my face.  You have answered ' + userNumCorrect + ' questions correctly.  Nice Job.';
-    console.log('User has ' + userNumCorrect + ' answers correct');
-  }
-}
-
-function thirdQuestion() {
-  var userAnswer3 = prompt('You are doing great ' + userName + ', lets keep moving!  This is another yes/no question, so please answer with Y or N.  Is my favorite animal the slothbear?');
-  console.log('The user\'s third answer is ' + userAnswer3);
-
-  if (userAnswer3.toUpperCase() === 'Y' || userAnswer3.toUpperCase() === 'YES') {
-    userNumCorrect++;
-    correctCounter();
-
-    res3.textContent = 'Right you are ' + userName + '!  My favorite animal is the slothbear.  Lets make some vacuum noises to celebrate!  You have answered ' + userNumCorrect + ' questions correctly.  Nice Job.';
-    console.log('User has ' + userNumCorrect + ' answers correct');
-  } else {
-    res3.textContent = userName + ', you got this one wrong.  I was going to share my pile of ants with you, but now I am going to keep them all to myself.  You have answered ' + userNumCorrect + ' questions correctly.  Nice Job.';
-    console.log('User has ' + userNumCorrect + ' answers correct');
-  }
 }
 
 var myAge = 34;
@@ -97,8 +72,9 @@ function fourthQuestion() {
     } else if (userAnswer4 === myAge) {
       userNumCorrect++;
       correctCounter();
-      
+
       res4.textContent = 'Holy Shamoley, ' + userName + ', you are right on!  I am 34 years old.  You deserve a gold star and a giant stuffed slothbear!  You have answered ' + userNumCorrect + ' answers correctly, and guessing my age only took you ' + userNumGuesses + ' guesses!  Great job!';
+      res4.className = 'right';
       console.log('User has ' + userNumCorrect + ' answers correct');
       console.log('The user guessed ' + userNumGuesses + ' times.');
     }
@@ -126,14 +102,13 @@ function fifthQuestion() {
 
   if (correctAnswer) {
     res5.textContent = userName + ' I am so impressed. ' + userAnswer4 + ' IS one of my favorite FC Slothbear players!';
+    res5.className = 'right';
   } else {
     res5.textContent = 'Sorry, ' + userName + '. Here are my 6 favorite FC Slothbear players: ' + favPlayers.join(', ') + '.';
+    res5.className = 'wrong';
   }
 }
 
 userGreeting();
-firstQuestion();
-secondQuestion();
-thirdQuestion();
 fourthQuestion();
 fifthQuestion();
