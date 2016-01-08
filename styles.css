@@ -9,6 +9,14 @@ body {
   padding: 50px 50px 50px 50px;
 }
 
+.greeting {
+  border-style: double;
+  border-width: 10px;
+  border-color: lime white lime white;
+  padding: 10px;
+  text-align: center;
+}
+
 a:link {
   color: #E8E8E8;
 }
