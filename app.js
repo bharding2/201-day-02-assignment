@@ -27,7 +27,7 @@ function userGreeting () {
 userGreeting();
 
 function correctCounter() {
-  correct1.textContent += userNumCorrect + ' questions correct.';
+  correct1.textContent = 'Correct Answer Count: ' + userNumCorrect + ' questions correct.';
 }
 
 function imageInsert(rightwrong) {
