@@ -12,11 +12,11 @@ if (userName === '') {
 }
 
 var quesData = [
-  ['First question!  This is a yes/no question, ' + userName + ', so please answer with Y or N.  Was I born in Alaska?','Y','YES','Good job ' + userName + ', you are right!  I was born in Alaska.  The doctor had me fight a polar bear inside our igloo, as is tradition.  You have answered ' + userNumCorrect + ' questions correctly.  Nice Job.','Too bad ' + userName + ', you are wrong!  I was born in Alaska.  You better bone up on your trivia.  You have answered ' + userNumCorrect + ' questions correctly.  Nice Job.',res1],
+  ['First question!  This is a yes/no question, ' + userName + ', so please answer with Y or N.  Was I born in Alaska?','Y','YES','Good job ' + userName + ', you are right!  I was born in Alaska.  The doctor had me fight a polar bear inside our igloo, as is tradition.','Too bad ' + userName + ', you are wrong!  I was born in Alaska.  You better bone up on your trivia.',res1],
 
-  ['Alright ' + userName + ', next question! This is a yes/no question, so please answer with Y or N.  Are my eyes blue?','Y','YES', 'Great choice ' + userName + '!  My eyes are blue and dark, like a stormy sea. You have answered ' + userNumCorrect + ' questions correctly.  Nice Job.','Rough luck ' + userName +', you are wrong.  You should spend more time staring at my face.  You have answered ' + userNumCorrect + ' questions correctly.  Nice Job.',res2 ],
+  ['Alright ' + userName + ', next question! This is a yes/no question, so please answer with Y or N.  Are my eyes blue?','Y','YES', 'Great choice ' + userName + '!  My eyes are blue and dark, like a stormy sea.','Rough luck ' + userName +', you are wrong.  You should spend more time staring at my face.',res2 ],
 
-  ['You are doing great ' + userName + ', lets keep moving!  This is another yes/no question, so please answer with Y or N.  Is my favorite animal the slothbear?','Y','YES','Right you are ' + userName + '!  My favorite animal is the slothbear.  Lets make some vacuum noises to celebrate!  You have answered ' + userNumCorrect + ' questions correctly.  Nice Job.',userName + ', you got this one wrong.  I was going to share my pile of ants with you, but now I am going to keep them all to myself.  You have answered ' + userNumCorrect + ' questions correctly.  Nice Job.',res3]
+  ['You are doing great ' + userName + ', lets keep moving!  This is another yes/no question, so please answer with Y or N.  Is my favorite animal the slothbear?','Y','YES','Right you are ' + userName + '!  My favorite animal is the slothbear.  Lets make some vacuum noises to celebrate!',userName + ', you got this one wrong.  I was going to share my pile of ants with you, but now I am going to keep them all to myself.',res3]
 ];
 
 
@@ -27,7 +27,18 @@ function userGreeting () {
 userGreeting();
 
 function correctCounter() {
-  correct1.textContent = userNumCorrect + ' questions correct.';
+  correct1.textContent += userNumCorrect + ' questions correct.';
+}
+
+function imageInsert(rightwrong) {
+  var insertCorrectImage = '<br /><img src="correct.png" />';
+  var insertIncorrectImage = '<br /><img src="incorrect.png" />';
+
+  if (rightwrong === 'correct') {
+    return insertCorrectImage;
+  } else {
+    return insertIncorrectImage;
+  }
 }
 
 function questions() {
@@ -38,10 +49,12 @@ function questions() {
     correctCounter();
     quesData[i][5].textContent = quesData[i][3];
     quesData[i][5].className='right';
+    quesData[i][5].innerHTML += imageInsert('correct');
 
     } else {
     quesData[i][5].textContent = quesData[i][4];
     quesData[i][5].className='wrong';
+    quesData[i][5].innerHTML += imageInsert('incorrect');
     }
 }
 
@@ -77,6 +90,7 @@ function fourthQuestion() {
 
       res4.textContent = 'Holy Shamoley, ' + userName + ', you are right on!  I am 34 years old.  You deserve a gold star and a giant stuffed slothbear!  You have answered ' + userNumCorrect + ' answers correctly, and guessing my age only took you ' + userNumGuesses + ' guesses!  Great job!';
       res4.className = 'right';
+      res4.innerHTML += imageInsert('correct');
       console.log('User has ' + userNumCorrect + ' answers correct');
       console.log('The user guessed ' + userNumGuesses + ' times.');
     }
@@ -105,9 +119,11 @@ function fifthQuestion() {
   if (correctAnswer) {
     res5.textContent = userName + ' I am so impressed. ' + userAnswer4 + ' IS one of my favorite FC Slothbear players!';
     res5.className = 'right';
+    res5.innerHTML = imageInsert('correct');
   } else {
     res5.textContent = 'Sorry, ' + userName + '. Here are my 6 favorite FC Slothbear players: ' + favPlayers.join(', ') + '.';
     res5.className = 'wrong';
+    res5.innerHTML += imageInsert('incorrect');
   }
 }
 
