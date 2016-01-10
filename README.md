@@ -31,7 +31,20 @@ First Repo; guessing game.  Assignment from day two including a website with a j
   <li>Added textContent to bring responses to HTML page.</li>
   <li>Added function calls.</li>
 </ul>  
-<h4>(Ben Harding as Driver)</h3>
+<h4>(Ben Harding as Driver)</h4>
 <ul>
   <li>Added fifth question with multiple correct answers using an array.</li>
+</ul>
+<h3>day 5: 01/08/15 (Elena Saygo as driver)</h3>
+<ul>
+  <li>DRYed the yes no questions functions into one function controlled by an array</li>
+  <li>Changed color of right/wrong answers on html pages using className</li>
+  <li>Added styles.css</li>
+  <li>Added links to Thursday/Friday partner projects</li>
+  <li>Deployed repository into a gh-pages branch to make the website live for all to see!</li>
+</ul>  
+<h4>(Ben Harding as Driver)</h4>
+<ul>
+  <li>More css styling</li>
+  <li>Adding images using innerHTML (hopefully)</li>
 </ul>
