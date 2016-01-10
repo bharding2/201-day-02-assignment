@@ -46,4 +46,5 @@ First Repo; guessing game.  Assignment from day two including a website with a j
 <h4>(Ben Harding as Driver)</h4>
 <ul>
   <li>More css styling</li>
+  <li>Adding images using innerHTML (hopefully)</li>
 </ul>
